@@ -33,7 +33,7 @@ section {
   --Lobster: "Lobster", cursive;
   --light-black: #2e2c2caf;
   --bggradient: linear-gradient(to bottom,
-    #dd2476, #ff512f);
+    #6b61c5, #9c91fa);
   --light-gray: rgba(255, 255, 255, 0.5);
 }
 
@@ -91,11 +91,10 @@ header .row .col-md-5{
   padding:4.2vmin 1vmin;
 }
 
-header .row .col-md-7{
-  padding-top: 10vmin;
-
-  padding: 22vmin 1vmin;
-  padding-bottom: 10vmin;
+header .row .col-md-12{
+  padding-top: 0vmin;
+  padding: 10vmin 1vmin;
+  padding-bottom: 5vmin;
   font-family: var(--Rubik);
   color: white;
 }

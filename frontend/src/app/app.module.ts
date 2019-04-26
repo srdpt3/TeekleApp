@@ -12,6 +12,7 @@ import { ReportComponent } from './report/report.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SignupComponent } from './signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReportComponent,
     SettingsComponent,
     SignupComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
