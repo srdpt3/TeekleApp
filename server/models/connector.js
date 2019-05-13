@@ -81,14 +81,15 @@ module.exports = {
   getbitCoinData: function (response) {
 
     var request = require('request');
-    request('https://api.coindesk.com/v1/bpi/currentprice.json', function (err, res, body) {
+    request("https://api.coindesk.com/v1/bpi/historical/close.json?start=2019-05-01&end=2019-05-30", function (err, res, body) {
       
    
-      var data = JSON.parse(body);
-      resultsFound["data"] = data;
-      console.log(resultsFound);
+      //var data = JSON.parse(body);
+      //resultsFound["data"] = data;
+      let data = JSON.parse(body)
+      console.log(data);
 
-      response.send(resultsFound);
+      response.send(data);
       
 
     });

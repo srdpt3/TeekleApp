@@ -10,7 +10,7 @@ export class BackendService {
 
   constructor(private _http: HttpClient) { }
 
-  login(formData){
+  login(formData) {
     // let fakeResponse_1 = {
     //   "errorCode" : "0",
     //   "errorMessage" : "User Id is invalid",
@@ -42,12 +42,12 @@ export class BackendService {
     //     }
     //     ,2000)
     //   });
-  let token = localStorage.getItem('token') ? localStorage.getItem('token') : "abcd";
-  let httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'token': token }) };
-  return this._http.post("http://localhost:3000/login", formData, httpOptions);
+    let token = localStorage.getItem('token') ? localStorage.getItem('token') : "abcd";
+    let httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'token': token }) };
+    return this._http.post("http://localhost:3000/login", formData, httpOptions);
   }
 
-  updateUser(formData){
+  updateUser(formData) {
     /**
     console.log(formData)
     let fakeResponse_3 = {
@@ -66,12 +66,12 @@ export class BackendService {
         ,2000)
       });
 */
-  let token = localStorage.getItem('token') ? localStorage.getItem('token') : "abcd";
-  let httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'token': token }) };
-  return this._http.post("http://localhost:3000/updateuser", formData, httpOptions);
+    let token = localStorage.getItem('token') ? localStorage.getItem('token') : "abcd";
+    let httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'token': token }) };
+    return this._http.post("http://localhost:3000/updateuser", formData, httpOptions);
   }
 
-  setUser(formData){
+  setUser(formData) {
     /**
     let fakeResponse_3 = {
       "errorCode" : "1",
@@ -89,12 +89,12 @@ export class BackendService {
         ,2000)
       });
  */
-  let token = localStorage.getItem('token') ? localStorage.getItem('token') : "abcd";
-  let httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'token': token }) };
-  return this._http.post("http://localhost:3000/signup", formData, httpOptions);
+    let token = localStorage.getItem('token') ? localStorage.getItem('token') : "abcd";
+    let httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'token': token }) };
+    return this._http.post("http://localhost:3000/signup", formData, httpOptions);
   }
 
-  getUser(){
+  getUser() {
     /**
     let fakeResponse_3 = {
       "errorCode" : "1",
@@ -116,12 +116,12 @@ export class BackendService {
         ,2000)
       });
        */
-  let token = localStorage.getItem('token') ? localStorage.getItem('token') : "abcd";
-  let httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'token': token }) };
-  return this._http.get("http://localhost:3000/user",httpOptions);
+    let token = localStorage.getItem('token') ? localStorage.getItem('token') : "abcd";
+    let httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'token': token }) };
+    return this._http.get("http://localhost:3000/user", httpOptions);
   }
 
-  getUserLocation(){
+  getUserLocation() {
     /**
     let fakeResponse_3 = {
       "errorCode" : "1",
@@ -149,46 +149,46 @@ export class BackendService {
         ,2000)
       });
   */
- let token = localStorage.getItem('token') ? localStorage.getItem('token') : "abcd";
-  let httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'token': token }) };
-  return this._http.get("http://localhost:3000/getlocation", httpOptions);
-}
+    let token = localStorage.getItem('token') ? localStorage.getItem('token') : "abcd";
+    let httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'token': token }) };
+    return this._http.get("http://localhost:3000/getlocation", httpOptions);
+  }
 
-getData(){
-  
-  // let fakeResponse_3 = {
-  //   "errorCode" : "1",
-  //   "errorMessage" : "",
-  //   "rowCount" : "30",
-  //   "data": [{"disclaimer":"This data was produced from the CoinDesk Bitcoin Price Index (USD). Non-USD currency data converted using hourly conversion rate from openexchangerates.org",
-  //   "chartName":"Bitcoin",
-  //   "bpi":
-  //   {
-  //     "USD":
-  //     {"code":"USD","symbol":"&#36;","rate":"5,335.8383","description":"United States Dollar","rate_float":5335.8383},
-  //   }
-  // }]
-  // };
-  // return Observable.create(
-  //   observer => {
-  //     setTimeout(() => {
-  //       observer.next(fakeResponse_3)
-  //     }
-  //     ,2000)
-  //   });
+  getData() {
 
-let token = localStorage.getItem('token') ? localStorage.getItem('token') : "abcd";
-let httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'token': token }) };
-return this._http.get("http://localhost:3000/dashboard", httpOptions);
-  // return Observable.create(
-  //   observer => {
-  //     setTimeout(() => {
-  //       observer.next(data)
-  //     }
-  //     ,2000)
-  //   });
+    // let fakeResponse_3 = {
+    //   "errorCode" : "1",
+    //   "errorMessage" : "",
+    //   "rowCount" : "30",
+    //   "data": [{"disclaimer":"This data was produced from the CoinDesk Bitcoin Price Index (USD). Non-USD currency data converted using hourly conversion rate from openexchangerates.org",
+    //   "chartName":"Bitcoin",
+    //   "bpi":
+    //   {
+    //     "USD":
+    //     {"code":"USD","symbol":"&#36;","rate":"5,335.8383","description":"United States Dollar","rate_float":5335.8383},
+    //   }
+    // }]
+    // };
+    // return Observable.create(
+    //   observer => {
+    //     setTimeout(() => {
+    //       observer.next(fakeResponse_3)
+    //     }
+    //     ,2000)
+    //   });
 
-}
+    let token = localStorage.getItem('token') ? localStorage.getItem('token') : "abcd";
+    let httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'token': token }) };
+    return this._http.get("http://localhost:3000/dashboard", httpOptions);
+    // return Observable.create(
+    //   observer => {
+    //     setTimeout(() => {
+    //       observer.next(data)
+    //     }
+    //     ,2000)
+    //   });
+
+  }
 
 
 }

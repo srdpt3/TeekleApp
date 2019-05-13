@@ -1,0 +1,23 @@
+.container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 1fr;
+    /* padding-right: 2em;
+    padding-top: 1em; */
+
+    grid-gap: 5px;
+
+
+}
+.welcome{
+    grid-column: 1/-1
+}
+
+.chart{
+    grid-column: 1/9;
+}
+
+.roundup{
+    grid-column: 1/-1;
+}

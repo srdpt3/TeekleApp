@@ -1,17 +1,84 @@
-<main role="main" class="container">
+<!-- <main role="main" class="container">
   <h1 class="mt-5">&nbsp;</h1>
   <h5 class="mt-5">Reports</h5>
-  <br/>
+  <br />
   <div class="loader" *ngIf="dataLoading"></div>
-<div class="alert alert-danger" role="alert" *ngIf="error">
-  An error occured. Here is the error : {{ errorMessage }}.
+  <div class="alert alert-danger" role="alert" *ngIf="error">
+    An error occured. Here is the error : {{ errorMessage }}.
+  </div>
+  <br /><br />
+  <h1>{{ myData }}</h1>
+  <table>
+    <ul *ngFor="let item of myData">
+      <li>{{ item.bpi.USD.rate }}</li>
+      <li>{{ item.bpi.USD.description }}</li>
+    </ul>
+  </table>
+</main> -->
+
+<div class="container">
+  <div class="welcome">
+    <p class="lead">
+      This is a simple hero unit, a simple jumbotron-style component for calling
+      extra attention to featured content or information.
+    </p>
+    <p>
+      It uses utility classes for typography and spacing to space content out
+      within the larger container.
+    </p>
+  </div>
+  <div class="chart">
+    <div *ngIf="chart">
+      <canvas id="canvas">{{ chart }}</canvas>
+    </div>
+  </div>
+  <span></span>
+  <div class="roundup">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>거래일시</th>
+            <th>거래내역</th>
+            <th>가맹점역</th>
+            <th>결재금액</th>
+            <th>잔돈</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5/10/19</td>
+            <td>카카오프렌즈</td>
+            <td>Product Name 1</td>
+            <td>Customer 1</td>
+            <td>Complete</td>
+          </tr>
+          <tr>
+            <td>5/10/19</td>
+            <td>가맹점역</td>
+            <td>Product Name 2</td>
+            <td>Customer 2</td>
+            <td>Complete</td>
+          </tr>
+          <tr>
+            <td>거래내역</td>
+
+            <td>결재금액</td>
+            <td>Product Name 3</td>
+            <td>Customer 3</td>
+            <td>Processing</td>
+          </tr>
+          <tr>
+            <td>거래내역</td>
+
+            <td>잔돈</td>
+            <td>Product Name 4</td>
+            <td>Customer 4</td>
+            <td>Pending</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="price"></div>
 </div>
-<br/><br/>
-<h1>{{myData}}</h1>
-<table>
-<ul *ngFor="let item of myData">
-  <li>{{item.bpi.USD.rate}}</li>
-  <li>{{item.bpi.USD.description}}</li> 
-</ul>
-</table>
-</main>
+
